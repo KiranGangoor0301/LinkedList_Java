@@ -5,6 +5,7 @@ public class SingleLLFun {
         list.insertFirst(7);
         list.insertFirst(8);
         list.insertFirst(90);
+        list.insertLast(87);
         list.display();
     }
 }

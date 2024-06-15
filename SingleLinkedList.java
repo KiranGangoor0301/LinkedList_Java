@@ -17,6 +17,13 @@ class SingleLinkedList {
         }
         size++;
     }
+    public void insertLast(int val)
+    {
+        Node node= new Node(val);
+        tail.next=node;
+        tail=node;
+        size++;
+    }
 
     public void display() {
         Node temp = head;
