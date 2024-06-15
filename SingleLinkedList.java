@@ -98,10 +98,26 @@ class SingleLinkedList {
             return deleteAtLast();
         }
         Node temp=get(index-2);
-        int val=temp.value;
+        int val=temp.next.value;
         temp.next=temp.next.next;
         size--;
         return val;
+
+    }
+    public void  reverseDisplay()
+    {
+        Node temp=head;
+        Node prev=null;
+        Node next=null;
+        Node  current=head;
+        while(current != null)
+        {
+            next=current.next;
+            current.next=prev;
+            prev=current;
+            current=next;
+        }
+        head=prev;
 
     }
     public void display() {
