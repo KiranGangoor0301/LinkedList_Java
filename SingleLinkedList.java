@@ -63,6 +63,30 @@ class SingleLinkedList {
         size--;
         return val;
     }
+    public int deleteAtLast()
+    {
+        if(head==tail)
+        {
+           
+            return  deleteAtFirst();
+        }
+        int val= tail.value;
+        Node lastSecond=get(size-2);
+        tail=lastSecond;
+        tail.next=null;
+        size--;
+        return val;
+    }
+
+    public Node get(int index)
+    {
+        Node temp=head;
+        while(temp.next!=tail)
+        {
+            temp=temp.next;
+        }
+        return temp;
+    }
     public void display() {
         Node temp = head;
         while (temp != null) {
