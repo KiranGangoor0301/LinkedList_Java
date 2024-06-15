@@ -20,8 +20,34 @@ class SingleLinkedList {
     public void insertLast(int val)
     {
         Node node= new Node(val);
+        if(head==null)
+        {
+            insertFirst(val);
+            return;
+        }
         tail.next=node;
         tail=node;
+        size++;
+    }
+    public void insertMiddle(int value,int index)
+    {
+        Node node= new Node(value);
+        if(index==1)
+        {
+            insertFirst(value);
+            return;
+        }
+        if(index==size)
+        {
+            insertLast(value);
+            return;
+        }
+        Node temp=head;
+        for (int i = 1; i <index-1; i++) {
+            temp=temp.next;
+        }
+        node.next=temp.next;
+        temp.next=node;
         size++;
     }
 

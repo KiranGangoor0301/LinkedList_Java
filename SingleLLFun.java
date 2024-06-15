@@ -6,6 +6,7 @@ public class SingleLLFun {
         list.insertFirst(8);
         list.insertFirst(90);
         list.insertLast(87);
+        list.insertMiddle(34, 1);
         list.display();
     }
 }
