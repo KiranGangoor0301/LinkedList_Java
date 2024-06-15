@@ -8,7 +8,8 @@ public class SingleLLFun {
         list.insertLast(87);
         list.insertMiddle(34, 1);
         // System.out.println(list.deleteAtFirst());
-        System.out.println(list.deleteAtLast());
+        // System.out.println(list.deleteAtLast());
+        System.out.println(list.deleteAtMiddle(2));
         list.display();
     }
 }

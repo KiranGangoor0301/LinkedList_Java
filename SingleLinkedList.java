@@ -81,11 +81,28 @@ class SingleLinkedList {
     public Node get(int index)
     {
         Node temp=head;
-        while(temp.next!=tail)
-        {
-            temp=temp.next;
-        }
+       for (int i = 0; i < index; i++) {
+        temp=temp.next;
+       }
         return temp;
+    }
+
+    public int deleteAtMiddle(int index)
+    {
+        if(tail==head)
+        {
+            return deleteAtFirst();
+        }
+        if(index==size)
+        {
+            return deleteAtLast();
+        }
+        Node temp=get(index-2);
+        int val=temp.value;
+        temp.next=temp.next.next;
+        size--;
+        return val;
+
     }
     public void display() {
         Node temp = head;
