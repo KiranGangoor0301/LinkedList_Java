@@ -50,7 +50,19 @@ class SingleLinkedList {
         temp.next=node;
         size++;
     }
-
+    public int deleteAtFirst()
+    {
+        int val=head.value;
+        Node temp=head;
+        head=head.next;
+        temp=null;
+        if(head==null)
+        {
+            tail=null;
+        }
+        size--;
+        return val;
+    }
     public void display() {
         Node temp = head;
         while (temp != null) {
